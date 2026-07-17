@@ -21,8 +21,8 @@ public class ImageSearchTool {
     //日志
     private static final Logger log = LoggerFactory.getLogger(ImageSearchTool.class);
 
-    // 替换为你的 Pexels API 密钥（需从官网申请）
-    private static final String API_KEY = "tKCvGMuoajpfbkmUPrMiIDeyuHlYr5iEOF3b3sAKqSxuzCv5jk0VEYHr";
+    @Value("${pexels.api-key}")
+    private String API_KEY;
 
     // Pexels 常规搜索接口（请以文档为准）
     private static final String API_URL = "https://api.pexels.com/v1/search";

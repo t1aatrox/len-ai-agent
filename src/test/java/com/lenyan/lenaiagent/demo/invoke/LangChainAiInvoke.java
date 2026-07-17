@@ -8,7 +8,7 @@ public class LangChainAiInvoke {
     public static void main(String[] args) {
         ChatLanguageModel model = QwenChatModel.builder()
                 .apiKey(TestApiKey.API_KEY)
-                .modelName("qwen-max")
+                .modelName("qwen3.6-max-preview")
                 .build();
         System.out.println("LangChainAi调用：" + model.chat("我是程序员lenyan"));
     }

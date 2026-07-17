@@ -22,12 +22,12 @@ public class QwenConfig {
     /**
      * 文本模型名称
      */
-    private String textModel = "qwen-plus";
+    private String textModel = "qwen3.6-flash";
 
     /**
      * 视觉模型名称
      */
-    private String visionModel = "qwen-vl-plus";
+    private String visionModel = "qwen-image-2.0-pro-2026-04-22";
 
     /**
      * 视频模型名称
@@ -37,7 +37,7 @@ public class QwenConfig {
     /**
      * 音频模型名称
      */
-    private String audioModel = "qwen2-audio-instruct";
+    private String audioModel = "qwen-audio-3.0-tts-flash";
 
     /**
      * 是否开启流式输出

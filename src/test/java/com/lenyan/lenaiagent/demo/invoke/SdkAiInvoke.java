@@ -15,7 +15,7 @@ public class SdkAiInvoke {
             Generation gen = new Generation();
             GenerationParam param = GenerationParam.builder()
                     .apiKey(TestApiKey.API_KEY)
-                    .model("qwen-plus")
+                    .model("deepseek-v4-flash")
                     .messages(Arrays.asList(
                             Message.builder().role(Role.SYSTEM.getValue()).content("You are a helpful assistant.")
                                     .build(),

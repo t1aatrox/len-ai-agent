@@ -1,7 +1,6 @@
 package com.lenyan.lenaiagent.demo.invoke;
 
 import cn.hutool.http.HttpRequest;
-import cn.hutool.http.HttpResponse;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 import org.springframework.stereotype.Component;
@@ -9,9 +8,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class HttpAiApiClient {
     public static String callQwenModel(String apiKey, String userMessage) {
-        String url = "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation";
+        String url = "https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation";
+//        String url = "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation";
         JSONObject requestBody = JSONUtil.createObj()
-                .set("model", "qwen-plus")
+                .set("model", "qwen3.6-flash")
                 .set("input", JSONUtil.createObj()
                         .set("messages", JSONUtil.createArray()
                                 .put(JSONUtil.createObj().set("role", "system").set("content",

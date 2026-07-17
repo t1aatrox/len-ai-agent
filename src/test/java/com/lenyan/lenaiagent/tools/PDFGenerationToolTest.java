@@ -71,7 +71,7 @@ class PDFGenerationToolTest {
                 
                 ## 4. 越秀公园
                 
-                ![越秀公园](https://img.picui.cn/free/2025/06/07/68442eb6da377.png)
+                ![越秀公园](https://i.postimg.cc/hPG2gsSM/Gemini-Generated-Image-ptc6eptc6eptc6ep.png)
                 
                 ### 景点介绍
                 
