@@ -9,13 +9,17 @@ import com.alibaba.dashscope.utils.JsonUtils;
 
 import java.util.Arrays;
 
-public class SdkAiInvoke {
+public class SDKDemo {
+
+}
+
+class DashScopeSDKTest {
     public static void main(String[] args) {
         try {
             Generation gen = new Generation();
             GenerationParam param = GenerationParam.builder()
-                    .apiKey(TestApiKey.API_KEY)
-                    .model("deepseek-v4-flash")
+                    .apiKey(System.getenv("DASHSCOPE_API_KEY"))
+                    .model("qwen3.6-max-preview")
                     .messages(Arrays.asList(
                             Message.builder().role(Role.SYSTEM.getValue()).content("You are a helpful assistant.")
                                     .build(),

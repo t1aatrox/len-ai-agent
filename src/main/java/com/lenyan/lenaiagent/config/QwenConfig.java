@@ -22,7 +22,7 @@ public class QwenConfig {
     /**
      * 文本模型名称
      */
-    private String textModel = "qwen3.6-flash";
+    private String textModel = "qwen3.7-plus";
 
     /**
      * 视觉模型名称

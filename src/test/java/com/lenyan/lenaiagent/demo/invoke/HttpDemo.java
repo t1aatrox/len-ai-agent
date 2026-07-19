@@ -3,15 +3,13 @@ package com.lenyan.lenaiagent.demo.invoke;
 import cn.hutool.http.HttpRequest;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
-import org.springframework.stereotype.Component;
 
-@Component
-public class HttpAiApiClient {
+public class HttpDemo {
     public static String callQwenModel(String apiKey, String userMessage) {
-        String url = "https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation";
-//        String url = "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation";
+//        String url = "https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation";
+        String url = "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation";
         JSONObject requestBody = JSONUtil.createObj()
-                .set("model", "qwen3.6-flash")
+                .set("model", "qwen3.6-max-preview")
                 .set("input", JSONUtil.createObj()
                         .set("messages", JSONUtil.createArray()
                                 .put(JSONUtil.createObj().set("role", "system").set("content",
@@ -28,6 +26,6 @@ public class HttpAiApiClient {
     }
 
     public static void main(String[] args) {
-        System.out.println("Http调用：" + callQwenModel(TestApiKey.API_KEY, "你是谁？"));
+        System.out.println("Http调用：" + callQwenModel(System.getenv("DASHSCOPE_API_KEY"), "你是谁？"));
     }
 }
